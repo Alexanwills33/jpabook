@@ -34,3 +34,6 @@ build/
 
 # 프로젝트 제외 경로
 /src/main/java/com/example/jpabook/start/
+
+*.yaml
+persistence.xml
