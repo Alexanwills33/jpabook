@@ -1,20 +1,21 @@
-package com.example.jpabook.chap6.manytoone.oneside;
+package com.example.jpabook.chap7.jointable.onetoone;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
+// 자식
 @Entity
-public class Team {
-
+public class Child {
     @Id
     @GeneratedValue
-    @Column(name = "TEAM_ID")
+    @Column(name = "CHILD_ID")
     private Long id;
 
     private String name;
 
+    @OneToOne(mappedBy = "child")
+    private Parent parent;
 }
-
-// 하나의 파일을 계속 바꿔가면서 개선하는 방식의 책

@@ -1,20 +1,17 @@
-package com.example.jpabook.chap6.manytoone.oneside;
+package com.example.jpabook.chap7.compositekey.nonIdentifying.grandChild;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+// 부모
 @Entity
-public class Team {
-
+public class Parent {
     @Id
     @GeneratedValue
-    @Column(name = "TEAM_ID")
+    @Column(name = "PARENT_ID")
     private Long id;
 
     private String name;
-
 }
-
-// 하나의 파일을 계속 바꿔가면서 개선하는 방식의 책
